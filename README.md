@@ -7,16 +7,16 @@ It’s a simple, user-friendly React web app that helps users estimate their mor
 
 ### Features
 
-	•	Two-step input process with validation and helper tooltips
-	•	Dynamic mortgage calculation
-	•	Interactive UI inspired by Lloyds Bank branding
-	•	Built with React and TypeScript
+- Two-step input process with validation and helper tooltips
+- Dynamic mortgage calculation
+- Interactive UI inspired by Lloyds Bank branding
+- Built with React and TypeScript
 
 ### Tech Stack
 
-	•	React (TypeScript) – Frontend framework
-	•	CSS – Styling
-	•	Node.js – Runtime environment for local setup
+- React (TypeScript) – Frontend framework
+- CSS – Styling
+- Node.js – Runtime environment for local setup
 
 ### How to run the app
 
@@ -31,9 +31,9 @@ The app will run locally at http://localhost:3000. Entering this address in any 
 
 ### How it works
 
-    1.	The user enters financial details (income, credit score, etc.).
-    2.	The app validates inputs.
-	3.	On submission, it calculates results using calculateMortgage() and displays them on the finish page.
+1. The user enters financial details (income, credit score, etc.).
+2. The app validates inputs.
+3. On submission, it calculates results using calculateMortgage() and displays them on the finish page.
 
 ### Important note about the license
 
