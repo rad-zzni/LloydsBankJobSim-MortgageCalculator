@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* default, okay */
+  justify-content: flex-start; /* prevents extra vertical stretching */
+  height: auto; /* let children size naturally */
 }
 
 .App-logo {
@@ -7,32 +11,220 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'GTUltraFine-Black';
+  src: url('./fonts/GTUltraFine-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'GTUltraUltra-Black';
+  src: url('./fonts/GTUltra-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTUltra-Thin';
+  src: url('./fonts/GTUltra-Thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTUltra-Ultra';
+  src: url('./fonts/GTUltra-Ultra.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* App.css */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  background-color: #24bf80;
+  color: #000000;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'GTUltraFine-Black', sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.App-header h1 {
+  grid-column: 2 / 3;
+  justify-self: center;
+  margin: 0;
+}
+.App-header h2 {
+  grid-column: 2 / 3;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.App-header img {
+  grid-column: 1 / 2;
+  cursor: pointer;
+  justify-self: start;
+  height: 150px;
+}
+
+.App-header label {
+  grid-column: 3 / 4;
+  cursor: pointer;
+  justify-self: start;
+  height: 150px;
+  justify-self: end;
+  margin-right: 50px;
+  margin-top: 60px;
+  height: 90px;
+}
+.App-header label:hover{
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+
+
+.App-body-step1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* children aligned to top */
+  gap: 40px; 
+  max-height: auto; /* or remove if not needed */
+  height: auto; /* don’t stretch to fill parent */
+  flex: 0 0 auto; /* prevents it from stretching */
+  max-height: none; /* remove min-height effects if any */
+
+}
+
+.App-body-step2 {
+  display: flex;
+  flex-direction:row;
+  background-color: #f2ede5cd;
+  
+}
+
+.Input-column {
+  width: 100%;
+  padding: 20px;
+  padding-left: 300px;
+  font-family: 'GTUltraFine-Black', sans-serif;
+  font-size: 28px;
+  color: #000;
+  text-align: left;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 25px;
 }
+
+.Input-column input {
+  width: 300px;
+  height: 30px;
+  font-size: 30px;
+  margin-top: -20px;
+  padding: 5px;
+  /* display: flex;
+  flex-direction: row; */
+  gap: 25px;
+}
+
+
+.Message-box {
+  border: 1px solid #000000;
+  background-color: #fff1c9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 200px; /* separates by this much */
+  min-width: 500px;
+  min-height: auto;
+  max-height: none;
+  font-size: 12px;
+  width: 100%;
+  padding: 0px;
+  font-family: 'GTUltra-Thin', sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-align: left;
+}
+
+.Message-box a{
+  cursor: pointer;
+}
+.Message-box-header{
+  font-family: 'GTUltraFine-Black';
+  display: block;
+  text-align: center;
+  background-color: #bfab9b;
+  padding: 20px;
+}
+.Help-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  position: relative;
+  bottom: 6px;
+  background-color: #ccc;
+  color: #bf3024;
+  font-family: 'GTUltra-Ultra';
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 1px;
+}
+.Help-button:active{
+  background-color: #bf3024;
+}
+
+.Help-button:disabled{
+  background-color: #f2ede5cd;
+  color: #f2ede5cd;
+  border: #f2ede5cd;
+  cursor: not-allowed;
+}
+
+.Next-steps-button{
+  margin-top: auto ;
+  width: 160px;
+  height: 60px;
+  border-radius: 10%;
+  border: 2px solid #000000;
+  position: relative;
+  bottom: 6px;
+  background-color: #ccc;
+  color: #000000;
+  font-family: 'GTUltraUltra-Black';
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 1px;
+}
+.Next-steps-button:active {
+  background-color: #64ea69;
+}
+.Next-steps-button:disabled {
+  background-color: #f2ede5cd;
+  color: #f2ede5cd;
+  border: #f2ede5cd;
+  cursor: not-allowed;
+}
+
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .Black-bottom {
+  flex-grow: 1;
+  background-color: black;
+  margin-top: 200px;
+} */

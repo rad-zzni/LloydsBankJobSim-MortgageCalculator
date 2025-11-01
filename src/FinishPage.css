@@ -1,0 +1,258 @@
+.App3 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+
+  
+  @font-face {
+    font-family: 'GTUltraFine-Black';
+    src: url('./fonts/GTUltraFine-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GTUltraUltra-Black';
+    src: url('./fonts/GTUltra-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GTUltra-Thin';
+    src: url('./fonts/GTUltra-Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GTUltra-Ultra';
+    src: url('./fonts/GTUltra-Ultra.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'GTUltraFine-ThinItalic';
+    src: url('./fonts/GTUltraFine-ThinItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* App.css */
+  .App-header3 {
+    width: 100%;
+    background-color: #24bf80;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'GTUltraFine-Black', sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  
+  .App-header3 h1 {
+    grid-column: 2 / 3;
+    justify-self: center;
+    margin: 0;
+  }
+  .App-header3 h2 {
+    grid-column: 2 / 3;
+    justify-self: center;
+    margin-top: 20px;
+  }
+  
+  .App-header3 img {
+    grid-column: 1 / 2;
+    cursor: pointer;
+    justify-self: start;
+    height: 150px;
+  }
+  
+  .App-header3 label {
+    grid-column: 3 / 4;
+    cursor: pointer;
+    justify-self: start;
+    height: 150px;
+    justify-self: end;
+    margin-right: 50px;
+    margin-top: 60px;
+    height: 90px;
+  }
+  .App-header3 label:hover{
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+  
+.Blue-card{
+  background-color: #eefcff;
+  border-color: #000000;
+  border-style:ridge;
+  border-radius: 5%;
+  border-width: 3px;
+  width: 92vw;
+  
+  margin: 4vh 4vw;
+  min-height: 60vh;
+  
+    /* The display is programmed down here*/
+  display: flex;
+}
+
+
+
+/* Note that becasue of the tsx file, the program already knows
+who should be the columns/components given flex. They are the two divs after it.*/
+.column1 {
+  width: 35vw;
+  align-items: start;      /* optional: center text horizontally */
+}
+.column1 h1{
+  text-align: center;
+  font-family: 'GTUltraFine-Black';
+  font-size: 2.5vw;
+  margin-left: 29vw;
+  
+}
+.column1 h2{
+  text-align: left;
+  font-family: 'GTUltraFine-ThinItalic';
+  font-size: 1.75vw;
+  padding-left: 50px;
+
+}
+.column1 p{
+  text-align: left;
+  font-family: 'GTUltraFine-Ultra';
+  font-size: 2vw;
+  padding-left: 190px;
+  
+  height: 10px;
+  font-weight: bold;
+  
+  padding-bottom: calc((70vh - 3 * 3.5vw - 2vw - 9vw)/3); /* bigger gap */
+}
+
+.Help-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  position: relative;
+  bottom: 6px;
+  background-color: #ccc;
+  color: #bf3024;
+  font-family: 'GTUltra-Ultra';
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  
+}
+.Help-button:hover{
+  transform: scale(1.2);
+}
+.Help-button:active{
+  background-color: #bf3024;
+  transform: scale(1.2);
+}
+
+
+.column2 {
+  width: 35vw;
+  border-right: 3px solid #000;
+  align-items: center;      /* optional: center text horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Message-box3 {
+  border: 3px solid #000000;
+  background-color: #fff1c9;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2vw;
+  align-items: center;
+  min-width: 15vw;
+  min-height: 40vh;
+  max-height: none;
+  text-justify: inter-cluster;
+  font-size: 12px;
+  width: 100%;
+  padding: 0px;
+  font-family: 'GTUltra-Thin', sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-align: left;
+}
+
+.Message-box3 a{
+  cursor: pointer;
+}
+.Message-box-header3{
+  font-family: 'GTUltraFine-Black';
+  text-align: center;
+  padding: 1vh 0vh;
+  background-color: #bfab9b;
+  min-width: 100%; /* Magic number */
+  height: 4vh;
+}
+
+
+.column3 {
+  width: 25vw;
+  display: flex; flex-direction: column;    /* optional */
+
+}
+.column3 h1{
+  text-align: center;
+  font-family: 'GTUltraFine-Black';
+  font-size: 2vw;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  margin-bottom: auto;
+}
+.column3 p{
+  text-align: left;
+  border: #000 1px solid;
+  background-color: rgb(241, 241, 236);
+  padding: 20px;
+  height: 30vh;
+  margin: 0 1vw;
+  font-family: 'GTUltraFine-Ultra';
+  font-size: 1vw;
+  /* margin-bottom: auto; */
+}
+
+.column3 button{
+  display: block;
+  padding: 2vh;
+  margin: 4vh;
+  font-family: 'GTUltraFine-Black';
+  font-size: 2vw;
+  border: #000 solid 3px;
+  border-radius: 5%;
+  cursor: pointer;
+  transition: all 0.2s ease;     /* smooth hover transitions */
+}
+.column3 button:hover {
+  background: #cdffc3;
+  transform: translateX(10px);
+}
+
+
+
+  
+  
+  
+  
+  .App-link {
+    color: #61dafb;
+  }

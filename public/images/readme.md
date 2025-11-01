@@ -1,0 +1,1 @@
+I could not upload a certificate because no certificate was sent to me. I have contacted the active bystanders team for my certificate, but for now, I have attached the page that approves I have completed the two modules, as proof.
