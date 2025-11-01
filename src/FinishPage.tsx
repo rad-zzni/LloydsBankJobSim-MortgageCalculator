@@ -28,9 +28,9 @@ const downloadTextFile = () => {
 function FinishPage( {setFinished, results}: FinishPageProps) {
   const [message3, setMessage3] = useState("");
   const helpTextsFinishPg = {
-    monthlyPayment: "I am monthly payment!",
-    totalPayment: "I am total payment!",
-    totalInterest: "I am total interest!"
+    monthlyPayment: "Your monthly payment is the fixed amount you pay each month toward your mortgage. It includes both the interest you owe for borrowing money and the portion that reduces your loan balance. It’s based on the property value, your deposit, the interest rate, and the loan term you entered.",
+    totalPayment: "Your total payment is the sum of all monthly payments you’ll make over the full mortgage term. It shows how much you’ll pay in total, combining both the loan amount and all the interest charged across the years.",
+    totalInterest: "Your total interest is the extra amount you’ll pay on top of the money you borrowed. It represents the cost of borrowing from the bank, calculated as the total payment minus the original loan amount, and depends on your rate, deposit, and repayment period."
   };
 
   return (

@@ -159,13 +159,13 @@ function MainUI({
     !validateInterestRate(interestRate);
 
   const helpTexts = {
-    income: "Enter your total annual income before taxes here.",
-    otherIncome: "Include any additional sources of income like freelance work.",
-    creditScore: "Your credit score is a number between 300-850 measuring creditworthiness.",
-    propertyValue: "The total market price of the property you want to purchase.",
-    depositPayment: "The upfront amount you pay toward the property before taking out the mortgage.",
-    mortgageTerm: "The length of time over which you agree to repay the mortgage, usually in years.",
-    interestRate: "The percentage charged by the lender on the amount you borrow, applied annually."
+    income: "Enter your total annual income before taxes. This is your primary source of earnings, such as your salary or wages, and helps determine how much you can afford to borrow for your mortgage. Lenders use this figure to assess your repayment capacity and overall financial stability.",
+    otherIncome: "Include any additional sources of income you receive besides your main job, such as freelance work, rental income, dividends, or side businesses. These sources increase your total earnings and can improve how much you may be eligible to borrow.",
+    creditScore: "Your credit score is a number between 300 and 850 that represents your reliability as a borrower. It reflects your history of managing credit, including past loans and payments. Higher scores indicate stronger creditworthiness, leading to better mortgage offers and lower interest rates.",
+    propertyValue: "This is the total estimated market price of the property you intend to purchase. It reflects the value of the home as assessed in the current housing market and determines the size of the loan you will need after deducting your deposit.",
+    depositPayment: "The deposit is the upfront amount you pay toward the property before taking out the mortgage. It directly reduces the amount you need to borrow and influences the interest rate offered by lenders. A larger deposit generally means lower monthly payments and interest overall.",
+    mortgageTerm: "The mortgage term refers to the length of time over which you agree to repay your loan, typically measured in years. A longer term means smaller monthly payments but more total interest, while a shorter term means higher payments but less interest paid overall.",
+    interestRate: "The interest rate is the annual percentage charged by your lender for borrowing money. It determines how much extra you’ll pay on top of your loan amount each year. Even small differences in interest rate can significantly change your total payment over the full mortgage term."
   };
 
   return (
