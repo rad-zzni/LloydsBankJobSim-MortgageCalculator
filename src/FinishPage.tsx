@@ -13,13 +13,27 @@ interface FinishPageProps {
   };
 }
 /* Chatgpt's downloading ST-component */
-const downloadTextFile = () => {
-  const data = "This is the content you want to save";
+const downloadTextFile = (results: {
+  monthlyPayment: number;
+  totalPayment: number;
+  totalInterest: number;
+  affordabilityWarning?: string;
+}) => {
+  const data =
+`Lloyds Bank Mortgage Calculator Results
+
+Monthly Payment: £${results.monthlyPayment.toFixed(2)}
+Total Payment: £${results.totalPayment.toFixed(2)}
+Total Interest: £${results.totalInterest.toFixed(2)}
+
+${results.affordabilityWarning ? `${results.affordabilityWarning}` : ""}
+`;
+
   const blob = new Blob([data], { type: 'text/plain' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'results.txt'; // file name
+  a.download = 'mortgage_results.txt';
   a.click();
   URL.revokeObjectURL(url);
 };
@@ -65,7 +79,7 @@ function FinishPage( {setFinished, results}: FinishPageProps) {
             <h1> Further Options </h1> <img src="/images/settings.png" alt="logo" style={{paddingBottom: '600px', height: '60px', width: '60px', marginLeft: '11vw', marginTop: '2vh'}}/>
             {/* <p> <span style={{fontWeight: 'bold'}}> Check out our other services here: </span> <br />  </p> */}
             <button style={{marginBottom: '-20px'}} onClick={()=>setFinished(false)}> Start over</button>
-            <button onClick={downloadTextFile}> Download results</button>
+            <button onClick={() => downloadTextFile(results)}> Download results</button>
           </div>
         </div>
     </>
