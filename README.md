@@ -22,7 +22,7 @@ It’s a simple, user-friendly React web app that helps users estimate their mor
 
 Clone the repo and install dependencies:
 ```
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/rad-zzni/LloydsBankJobSim-MortgageCalculator.git
 cd my-react-app
 npm install
 npm start
